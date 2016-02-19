@@ -4,7 +4,7 @@
 
 	<meta charset="utf-8">
 
-	<title>Spore | Wordpress theme for dev</title>
+	<title>Colloquium NSIT 2016</title>
 
 	<!-- Behavioral Meta Data -->
 	<meta name="apple-mobile-web-app-capable" content="yes">
@@ -13,6 +13,7 @@
     <link href="CSS/spore-font.css" rel="stylesheet" />
     <link href="CSS/animate.css" rel="stylesheet" />
     <link href="CSS/spore-animate.css" rel="stylesheet" />
+	<link href="CSS/style.css" rel="stylesheet" />
 <style>
 
 /*
@@ -90,7 +91,7 @@ html,body{
 }
 
 #trame{
-	background-image: url(IMG/trame.svg); /** Pattern - overlay **/
+
 	background-repeat:repeat;
 	position:absolute;
     width:100%;
@@ -118,7 +119,7 @@ html,body{
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	text-align:center;
-	font-size:24px;
+	font-size:30px;
 	line-height:130%;
 	color:#FFF;
     font-family: 'open_sansregular';
@@ -153,6 +154,8 @@ html,body{
 #wrapper-plus{
 	background-image: url(IMG/plus.svg);
 	background-repeat:no-repeat;
+	transform: translateX(20px);
+	transition: all 0.3s ease-in-out;
 	position:absolute;
 	width:32px;
 	height:32px;
@@ -364,10 +367,13 @@ html,body{
 	z-index:1;
 }
 
-#A3-right{margin-right:0;}
-#A3-left{padding-right:5%;}
+#A3-right{margin-right:0;
+padding-top: 10%}
+#A3-left{padding-right:5%;padding-top: 10%}
 #A3-middle{left:35%;padding-right:5%;}
-
+#maker {
+	color: #9B9DA3;
+}
 .calage
 {
     clear: both;
@@ -475,6 +481,11 @@ iframe {
     width:100%;
     height:auto;
  }
+
+#contact-map {
+	width:100%;
+	height:100%;
+}
 
 .video-container-1,.video-container-6,.video-container-7 {
     position:relative;
@@ -694,6 +705,7 @@ iframe {
 	padding-top:15px;
 }
 
+
 /* PART 5 BIS - RELATED BLOG NUMBERS */
 
 #A5b{
@@ -793,7 +805,7 @@ iframe {
 
 #A6{
 	position:relative;
-	height:275px;
+	height:45px;
 	width:100%;
 	z-index:1;
 	background-color:#FFF;
@@ -804,7 +816,7 @@ iframe {
 	width:300px;
 	left:50%;
 	margin-left:-150px;
-	top:125px;
+	top:0px;
 	z-index:5;
 	height:50px;
 }
@@ -836,6 +848,10 @@ iframe {
 	left:50%;
 	top:50%;
 	margin-top:-25%;
+}
+
+#logoc {
+	padding-top: 0px;
 }
 
 #cadre-behance,#cadre-dribbble,#cadre-facebook,#cadre-google,#cadre-linked{
@@ -1023,31 +1039,32 @@ iframe {
 <body>
 
 <!-- MENU TAB -->
+
 <div id="main-wrapper-menu">
-  <div id="wrapper-cross"></div>
-	<div id="wrapper-menu">
-	
-    <div class="recent-post text-part-menutab">
-        <ul>
-        <li><div id="recent-post-title">Our recent post</div></li>
-    	<li><div id="recent-post-1"><a href="spore-post1.html">Post a youtube video</a></div></li>
-		<li><div id="recent-post-2"><a href="spore-post2.html">Post an animated image</a></div></li>
-		<li><div id="recent-post-3"><a href="spore-post5.html">Post featured image</a></div></li>
-		<li><div id="recent-post-4"><a href="spore-post3.html">Auto-resized image</a></div></li>
-        </ul>
-    </div>
-    
-	<div class="category-post text-part-menutab">
-    	<div id="line-category-post"></div>
-        <ul>
-        <li><div id="category-post-title">Categories post</div></li>
-    	<li><div id="category-post-1"><a href="spore-cat-video.html">Video articles</a></div></li>
-		<li><div id="category-post-2"><a href="spore-cat-hotpost.html">Hot articles</a></div></li>
-		<li><div id="category-post-3"><a href="spore-cat-image.html">Images</a></div></li>
-        </ul>
-    </div>
-    
-    </div>
+	<div id="wrapper-cross"></div>
+	<div id="wrapper-menu" style="top:50px;margin-top:50px;">
+
+		<div class="recent-post text-part-menutab">
+			<ul>
+				<li><div id="recent-post-title">Our Events</div></li>
+				<li><div id="recent-post-1"><a href="mun.html">Model United Nations</a></div></li>
+				<li><div id="recent-post-2"><a href="ipc.html">Inter Parlimentary Committee</a></div></li>
+				<li><div id="recent-post-3"><a href="deb.html">Debate and Literary</a></div></li>
+				<li><div id="recent-post-4"><a href="ip.html">International Press</a></div></li>
+			</ul>
+		</div>
+
+		<div class="category-post text-part-menutab">
+			<div id="line-category-post"></div>
+			<ul>
+				<li><div id="category-post-title">About Us</div></li>
+				<li><div id="category-post-1"><a href="index.html">Home</a></div></li>
+				<li><div id="category-post-2"><a href="teammembers.html">Team Members</a></div></li>
+				<li><div id="category-post-3"><a href="index.html">Contact Us</a></div></li>
+			</ul>
+		</div>
+
+	</div>
 </div>
 
 <!-- BOUTON MENU TAB -->
@@ -1056,33 +1073,63 @@ iframe {
 
 <!-- HEADER -->
 
-<div id="A1-main">
-	    
-    <div id="wrapper-logo" class="object">
-	<a href="#"><div id="logo" class="shadow object" ><img src="IMG/logotop.svg" width="169" height="45"/></div></a>
+
+
+<header id="header" class="sticky">
+	<div class="wrap">
+		<div class="main">
+			<h1 id="mobile"><img src="img/logoc.png"></h1>
+
+			<ul id="navigation">
+				<li><a href="index.html#" class="anchor">Home<span class="border"></span></a></li>
+				<li><a href="index.html#about" class="anchor">About Us<span class="border"></span></a></li>
+				<li><a href="index.html#events" class="anchor" style = "left:20px;">Events<span class="border"></span></a></li>
+				<li class="center"><a id="logo" href="index.html">
+					<h1>
+					<div id="logoc">
+					<img src="img/logoc.png" height="70px" width="70px">
+					</div>
+					</h1>
+					<span class="label rotate"></span></a></li>
+				<li><a href="index.html#services" class="anchor">Sponsers<span class="border"></span></a></li>
+				<li><a href="index.html#contacts" class="anchor active">Contact Us<span class="border"></span></a></li>
+				<li><a href="https://en.wikipedia.org/wiki/Donald_Trump" target="_blank" class= "anchor">Skadoosh<span class="border"></span></a></li>
+				<div id="wrapper-plus" class="object"></div>
+
+			</ul>
+
+			<div id="nav-mobile"></div>
+		</div>
 	</div>
-    
-    <div id="A1">
+	<div class="after"></div>
+</header>
+
+
+
+
+<div id="A1-main">
+
+
+
+
+	<div id="A1">
     
     	<div class="blank"></div>
-    
-    	<div id="A0"></div>
+        	<div id="A0"></div>
     	<div id="A0-2"></div>
     	<div id="trame"></div>
         
 		
     	<div id="wrapper-head">
-   			<div id="title" class="object">Spore is a creative onepage wordpress theme for web developers who change the world.</div>
-            <div id="wrapper-learnmore">
-            	<div class="bouton-learnmore object">
-        			<div class="text-learnmore object">Learn more</div>
-    			</div>
-            </div>
+   			<div id="title" class="object">Welcome To Colloquium 2016.NSIT's Annual Debating and Literary Festival.Held on 26-27 March 2016</div>
+
            <a href="#ancre"><div id="fleche1"></div></a>
    	    </div>
 
+		<a href="#" class="scroll-btn anchor"></a>
 
-		<div id="wrapper-plus" class="object"></div>
+
+
         
 	</div>
         
@@ -1091,329 +1138,201 @@ iframe {
 <a name="ancre"></a>
 
 <!-- PART 2 - TITLE -->
-
+<section id="about">
 <div id="A2">
     
-    <div id="text-2" class="wow fadeIn" data-wow-offset="10">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore<span style="color:#999;"> magna aliquam.</span></div>
+    <div id="text-2" class="wow fadeIn" data-wow-offset="10">Colloquium is a debating festival which is world renowned for its amazing banter and discussions on the important issues.You should totally come<span style="color:#999;"> 26 - 27 March 2016</span></div>
     
 </div>
+
+
+
+</section>
     
 <!-- PART 3 - PORTFOLIO ARTICLES 3 GRID -->
-
+<section id="events">
 <div id="wrapper-A3" class="object">
     
     	<div id="A3-left">
-        
-        	<div id="wrapper-post1" class="text-part-A5">
-            	<div class="video-container-1">
-					<iframe width="560" height="315" src="//www.youtube.com/embed/aN-zEzr4Zwc" frameborder="0" allowfullscreen></iframe>
-                </div>
-            
-            	<div id="wrapper-A3-left-date-1">
-            		<div id="A3-left-date-1">22 nov, 2014</div>
-                	<div id="A3-left-icone-1"></div>
-            	</div> 
-            	<ul>
-            		<li><div id="A3-left-title-1"><a href="spore-post1.html">Post a Youtube video</a></div></li>
-            	</ul>
-                <div id="A3-left-text-1">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</div>  
-            </div>
+
             
             <div id="wrapper-post2" class="text-part-A5">
-            	<a href="spore-post2.html"><div id="A3-left-image-2"><img src="IMG/image1-01.jpg"  alt="post an image with animation" title="post an image with animation" class="grow"/></div></a>
+            	<a href="ipc.html"><div id="A3-left-image-2"><img src="IMG/image2-01.jpg"  alt="post an image with animation" title="post an image with animation" class="grow"/></div></a>
             
             	<div id="wrapper-A3-left-date-2">
             		<div id="A3-left-date-2">21 nov, 2014</div>
                 	<div id="A3-left-icone-2"></div>
             	</div> 
            		<ul>
-            		<li><div id="A3-left-title-2"><a href="spore-post2.html">Post an image with animation</a></div></li> 
+            		<li><div id="A3-left-title-2"><a href="ipc.html">Inter Parliamentary Colloquium</a></div></li>
             	</ul>
-            	<div id="A3-left-text-2">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam.</div>  
+            	<div id="A3-left-text-2">IPC</div>
             </div>
             
              <div id="wrapper-post3" class="text-part-A5">
-            	<a href="spore-post3.html"><div id="A3-left-image-3"><img src="IMG/image6-01.jpg"  alt="Auto-resized image" title="Auto-resized image" class="grow"/></div></a>
+            	<a href="ip.html"><div id="A3-left-image-3"><img src="IMG/image6-01.jpg"  alt="Auto-resized image" title="Auto-resized image" class="grow"/></div></a>
             
             	<div id="wrapper-A3-left-date-3">
             		<div id="A3-left-date-3">20 nov, 2014</div>
                 	<div id="A3-left-icone-3"></div>
             	</div> 
             	<ul>
-            		<li><div id="A3-left-title-3"><a href="spore-post3.html">Auto-resized image</a></div></li>
+            		<li><div id="A3-left-title-3">International Press<a href="ip.html"></a></div></li>
                 </ul>  
-            	<div id="A3-left-text-3">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam.</div>  
+            	<div id="A3-left-text-3">IP</div>
             </div>
             
         </div>
   
     	<div id="A3-middle">
         	
-            <div id="wrapper-post4" class="text-part-A5">
-            	<a href="spore-post4.html"><div id="A3-middle-image-4"><img src="IMG/image3-01.jpg"  alt="Another post" title="Another post" class="grow"/></div></a>
-            
-            	<div id="wrapper-A3-middle-date-4">
-            		<div id="A3-middle-date-4">19 nov, 2014</div>
-                	<div id="A3-middle-icone-4"></div>
-            	</div> 
-            	<ul>
-            		<li><div id="A3-middle-title-4"><a href="spore-post4.html">Another post</a></div></li>
-                </ul>  
-            	<div id="A3-middle-text-4">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam.</div>  
-            </div>
+
             
             <div id="wrapper-post5" class="text-part-A5">
-            	<a href="spore-post5.html"><div id="A3-middle-image-5"><img src="IMG/image4-01.jpg"  alt="Another post" title="Another post" class="grayscale" /></div></a>
+            	<a href="mun.html"><div id="A3-middle-image-5"><img src="IMG/boo.gif"  alt="Another post" title="Another post" class="grayscale" /></div></a>
             
             	<div id="wrapper-A3-middle-date-5">
             		<div id="A3-middle-date-5">18 nov, 2014</div>
                 	<div id="A3-middle-icone-5"></div>
             	</div> 
             	<ul>
-            		<li><div id="A3-middle-title-5"><a href="spore-post5.html">Post transition image</a></div></li>
+            		<li><div id="A3-middle-title-5"><a href="mun.html">Model United Nations</a></div></li>
                 </ul> 
-            	<div id="A3-middle-text-5">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam.</div>  
+            	<div id="A3-middle-text-5">MUN</div>
             </div>
-            
-            <div id="wrapper-post6" class="text-part-A5">
-            
-           		<div class="video-container-6">
-            		<iframe src="//player.vimeo.com/video/108753054?portrait=0&amp;color=ffffff" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-            	</div>
-                
-            	<div id="wrapper-A3-middle-date-6">
-            		<div id="A3-middle-date-6">17 nov, 2014</div>
-                	<div id="A3-middle-icone-6"></div>
-            	</div> 
-            	<ul>
-            		<li><div id="A3-middle-title-6"><a href="spore-post6.html">Post a Vimeo video</a></div></li>
-                </ul> 
-            	<div id="A3-middle-text-6">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam.</div>  
-            </div>
+
+			<div id="wrapper-post3" class="text-part-A5">
+				<a href="teammembers.html"><div id="A3-left-image-3"><img src="IMG/image3-01.jpg"  alt="Auto-resized image" title="Auto-resized image" class="grow"/></div></a>
+
+				<div id="wrapper-A3-left-date-3">
+					<div id="A3-left-date-3">20 nov, 2014</div>
+					<div id="A3-left-icone-3"></div>
+				</div>
+				<ul>
+					<li><div id="A3-left-title-3"><a href="teammembers.html">Team Members</a></div></li>
+				</ul>
+				<div id="A3-left-text-3">IPC</div>
+			</div>
         
         
         </div>
         
         <div id="A3-right">
         
-        	    <div id="wrapper-post7" class="text-part-A5">
-            	<div class="video-container-1">
-					<iframe width="560" height="315" src="//www.youtube.com/embed/CLHUpONf3yI" frameborder="0" allowfullscreen></iframe>
-                </div>
-            
-            	<div id="wrapper-A3-right-date-7">
-            		<div id="A3-right-date-7">16 nov, 2014</div>
-                	<div id="A3-right-icone-7"></div>
-            	</div> 
-            	<ul>
-            		<li><div id="A3-right-title-7"><a href="spore-post7.html">Another video post</a></div></li>
-                </ul>
-            	<div id="A3-right-text-7">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam</div>  
-            </div>
+
             
             <div id="wrapper-post8" class="text-part-A5">
-            	<a href="spore-post8.html"><div id="A3-right-image-8"><img src="IMG/image5-01.jpg"  alt="Post with transition image" title="Post with transition image" class="grow" /></div></a>
+            	<a href="deb.html"><div id="A3-right-image-8"><img src="IMG/image5-01.jpg"  alt="Post with transition image" title="Post with transition image" class="grow" /></div></a>
             
             	<div id="wrapper-A3-right-date-8">
             		<div id="A3-right-date-8">15 nov, 2014</div>
                 	<div id="A3-right-icone-8"></div>
             	</div> 
             	<ul>
-            		<li><div id="A3-right-title-8"><a href="spore-post8.html">Another post</a></div></li>
+            		<li><div id="A3-right-title-8"><a href="deb.html">Debating and Literary</a></div></li>
                 </ul>  
-            	<div id="A3-right-text-8">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam.</div>  
+            	<div id="A3-right-text-8">Debates</div>
             </div>
             
             <div id="wrapper-post9" class="text-part-A5">
-            	<a href="spore-post9.html"><div id="A3-right-image-9"><img src="IMG/image2-01.jpg"  alt="Another post" title="Another post" class="grow"/></div></a>
+            	<a href="#services"><div id="A3-right-image-9"><img src="IMG/image1-01.jpg"  alt="Another post" title="Another post" class="grow"/></div></a>
             
             	<div id="wrapper-A3-right-date-9">
             		<div id="A3-right-date-9">14 nov, 2014</div>
                 	<div id="A3-right-icone-9"></div>
             	</div> 
             	<ul>
-            		<li><div id="A3-right-title-9"><a href="spore-post9.html">Another post</a></div></li>
+            		<li><div id="A3-right-title-9"><a href="#services">Sponsers</a></div></li>
                 </ul>
-            	<div id="A3-right-text-9">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam.</div>  
+            	<div id="A3-right-text-9">The people who pay the bills</div>
             </div>
         
         </div>
 	<div class="calage"></div>     
 </div>
 
+</section>
+
 <!-- PART 4 - BOUTON PAGE 1-4 -->
-
-<div id="A4" class="object">
-
-	<div id="wrapper-A4" class="wow bounceInRight" data-wow-offset="10">
-    	
-        
-        <div id="page1" class="object">
-        	<div id="text-page1"><strong>1</strong></div>
-        </div>
-        
-        <div id="main-page2">
-        	<div id="page2" class="object">
-          		<div id="text-page2" class="object"><strong>2</strong></div>
-        	</div>
-        </div>
-        
-        <div id="main-page3">
-        	<div id="page3" class="object">
-            	<div id="text-page3" class="object"><strong>3</strong></div>
-        	</div>
-        </div>
-        
-		<div id="main-page4">
-        	<div id="page4" class="object">
-            	<div id="text-page4" class="object"><strong>4</strong></div>
-        	</div>
-		</div>
-        
-    </div>
-
-</div>
-
 <!-- PART 5 - SUB MENU AND SHORTCUTS -->
 
-<div id="A5"> 
- 
-	<div id="wrapper-A5">
-    
-        <div id="wrapper-part-left" class="text-part-A5">
-        	<div id="A5-left" class="wow flipInX" data-wow-offset="10">
-    			<div id="left-text-post"><strong>Our recent post</strong></div>
-            	<div id="left-line-post"></div>
-            	<div id="left-line2-post"></div>
-			<ul>	
-                <li><div id="left-text-post-1"><strong><a href="spore-post1.html">Post a youtube video</a></strong></div></li>
-				<li><div id="left-text-post-2"><strong><a href="spore-post2.html">Post an animated image</a></strong></div></li>
-				<li><div id="left-text-post-3"><strong><a href="spore-post5.html">Post featured image</a></strong></div></li>
-				<li><div id="left-text-post-4"><strong><a href="spore-post3.html">Auto-resized image</a></strong></div></li>
-        	</ul>
-            </div>
-        </div>
-        
-        <div id="wrapper-part-mid" class="text-part-A5">
-        	<div id="A5-middle" class="wow flipInX" data-wow-offset="10" data-wow-delay="0.2s">
-    			<div id="mid-text-post"><strong>Categories</strong></div>
-            	<div id="mid-line-post"></div>
-            	<div id="mid-line2-post"></div>
-			<ul>	
-                <li><div id="mid-text-post-1"><strong><a href="spore-cat-video.html">Video</a></strong></div></li>
-				<li><div id="mid-text-post-2"><strong><a href="spore-cat-hotpost.html">Hot articles</a></strong></div></li>
-				<li><div id="mid-text-post-3"><strong><a href="spore-cat-image.html">Image</a></strong></div></li>
-        	</ul>
-            </div>
-        </div>
-        
-        <div id="wrapper-part-right" class="text-part-A5">
-        	<div id="A5-right" class="wow flipInX" data-wow-offset="10" data-wow-delay="0.4s">
-    			<div id="right-text-post"><strong>Why will you chose my blog theme ?</strong></div>
-            	<div id="right-line-post"></div>
-            	<div id="right-line2-post"></div>
-			<ul>	
-                <li><div id="right-text-post-1"><strong><a href="http://en.wikipedia.org/wiki/Responsive_web_design">RWD - Responsive Web design</a></strong></div></li>
-				<li><div id="right-text-post-2"><strong><a href="#">New javascript effect and animations</a></strong></div></li>
-				<li><div id="right-text-post-3"><strong><a href="#">Extensible bloc adapted</a></strong></div></li>
-				<li><div id="right-text-post-4"><strong><a href="#">No need to modify the code</a></strong></div></li>
-           </ul>
-           </div>
-        </div>
-        
-    <div class="A5-calage"></div>
+<section id="services">
+	<div>
+		<h2 class="page-title">Our Project Partners<span class="border"></span></h2>
+		<h3 class="page-subtitle">We are grateful for your contribution!</h3>
+		<ul class="customers">
+			<a href="http://www.protsahan.co.in/" target="_blank"><li><img src="img/ngo/1.png" alt=""><div class="over"></div></li></a>
+			<a href="http://www.deepalaya.org/" target="_blank"><li><img src="img/ngo/logo.png" alt=""><div class="over"></div></li></a>
+			<a href="http://www.icar.org.in/en/krishi-vigyan-kendra.htm" target="_blank"><li><img src="img/ngo/2.png" alt=""><div class="over"></div></li></a>
+			<a href="http://deepjyotingo.com/" target="_blank"><li><img src="img/ngo/3.jpg" alt=""><div class="over"></div></li></a>
+			<a href="http://www.cry.org/" target="_blank"><li><img src="img/ngo/4.png" alt=""><div class="over"></div></li></a>
+		</ul>
 	</div>
-    
-</div>
+
+	<div class="wrap">
+		<div class="touch">
+			<h2>Are you ready to start a conversation?</h2>
+			<a class="btn anchor" href="index.html#contacts">Get in touch</a>
+
+		</div>
+	</div>
+
+</section>
+
+
 
 
 <!-- PART 5 BIS - SUB MENU AND RELATED NUMBERS -->
 
-<div id="A5b"> 
- 
-	<div id="wrapper-A5b">
-    
-        <div id="wrapper-A5b-part-left">
-        	<div id="A5b-left" class="wow flipInX" data-wow-offset="10">
-    			<div id="left-A5b-text-post">14</div>
-            	<div id="left-A5b-line-post"></div>
-            	<div id="left-A5b-line2-post"></div>
-				<div id="left-A5b-text-post-1"><strong>Posts</strong></div>
-        	</div>
-        </div>
-        
-        <div id="wrapper-A5b-part-mid">
-        	<div id="A5b-middle" class="wow flipInX" data-wow-offset="10" data-wow-delay="0.2s">
-    			<div id="mid-A5b-text-post">235</div>
-            	<div id="mid-A5b-line-post"></div>
-            	<div id="mid-A5b-line2-post"></div>
-				<div id="mid-A5b-text-post-1"><strong>Likes</strong></div>
-        	</div>
-        </div>
-        
-        <div id="wrapper-A5b-part-right">
-        	<div id="A5b-right" class="wow flipInX" data-wow-offset="10" data-wow-delay="0.4s">
-    			<div id="right-A5b-text-post">6509</div>
-            	<div id="right-A5b-line-post"></div>
-            	<div id="right-A5b-line2-post"></div>
-				<div id="right-A5b-text-post-1"><strong>Views</strong></div>
-           </div>
-        </div>
-        
-    <div class="A5b-calage"></div>
+
+
+<div id="contact-map">
+	<section id="contacts">
+		<div class="contacts-mobile-over"></div>
+		<ul class="navigation">
+			<li><a href="#" id="zoomin"></a></li>
+			<li><a href="#" id="zoomout"></a></li>
+		</ul>
+		<div id="map" style="position: relative; overflow: hidden; transform: translateZ(0px) translateZ(0px); background-color: rgb(229, 227, 223);"><div class="gm-style" style="position: absolute; left: 0px; top: 0px; overflow: hidden; width: 100%; height: 100%; z-index: 0;"><div style="position: absolute; left: 0px; top: 0px; overflow: hidden; width: 100%; height: 100%; z-index: 0; cursor: url(https://maps.gstatic.com/mapfiles/openhand_8_8.cur) 8 8, default;"><div style="position: absolute; left: 0px; top: 0px; z-index: 1; width: 100%; transform-origin: 0px 0px 0px; transform: matrix(1, 0, 0, 1, 0, 0);"><div style="transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 100; width: 100%;"><div class="infoBox" style="width: 400px; height: 215px; position: absolute; visibility: visible; left: 924.694296177477px; top: 85.2646632180549px; background: url(image/marker-label.png) no-repeat;"><img class="MapCloseButton src=" http:="" www.google.com="" intl="" en_us="" mapfiles="" close.gif'="" align="right" style=" position: relative; cursor: pointer; margin: 2px;"><div style="color: rgb(255, 255, 255);">			<div class="marker-label">				 Colloquium,NSIT<br>				Dwarka 110078<br>				New Delhi<br>				</div>			</div></div><div style="position: absolute; left: 0px; top: 0px; z-index: 0;"><div style="position: absolute; left: 0px; top: 0px; z-index: 1;"><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 930px; top: -33px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 930px; top: 223px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 1186px; top: 223px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 1186px; top: -33px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 674px; top: 223px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 674px; top: -33px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 930px; top: -289px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 930px; top: 479px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 674px; top: -289px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 674px; top: 479px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 1186px; top: -289px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 1186px; top: 479px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 418px; top: -33px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 418px; top: 223px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 1442px; top: -33px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 1442px; top: 223px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 1442px; top: -289px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 418px; top: 479px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 418px; top: -289px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 1442px; top: 479px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 1698px; top: 223px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 162px; top: -33px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 1698px; top: -33px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 162px; top: 223px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 1698px; top: -289px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 162px; top: -289px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 162px; top: 479px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 1698px; top: 479px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: -94px; top: 223px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 1954px; top: 223px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 1954px; top: -33px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: -94px; top: -33px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 1954px; top: -289px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: -94px; top: -289px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: -94px; top: 479px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 1954px; top: 479px;"></div></div></div></div><div style="transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 101; width: 100%;"></div><div style="transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 102; width: 100%;"></div><div style="transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 103; width: 100%;"><div style="position: absolute; left: 0px; top: 0px; z-index: -1;"><div style="position: absolute; left: 0px; top: 0px; z-index: 1;"><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: 930px; top: -33px;"></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: 930px; top: 223px;"></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: 1186px; top: 223px;"></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: 1186px; top: -33px;"></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: 674px; top: 223px;"></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: 674px; top: -33px;"></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: 930px; top: -289px;"></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: 930px; top: 479px;"></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: 674px; top: -289px;"></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: 674px; top: 479px;"></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: 1186px; top: -289px;"></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: 1186px; top: 479px;"></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: 418px; top: -33px;"></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: 418px; top: 223px;"></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: 1442px; top: -33px;"></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: 1442px; top: 223px;"></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: 1442px; top: -289px;"></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: 418px; top: 479px;"></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: 418px; top: -289px;"></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: 1442px; top: 479px;"></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: 1698px; top: 223px;"></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: 162px; top: -33px;"></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: 1698px; top: -33px;"></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: 162px; top: 223px;"></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: 1698px; top: -289px;"></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: 162px; top: -289px;"></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: 162px; top: 479px;"></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: 1698px; top: 479px;"></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: -94px; top: 223px;"></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: 1954px; top: 223px;"></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: 1954px; top: -33px;"></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: -94px; top: -33px;"></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: 1954px; top: -289px;"></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: -94px; top: -289px;"></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: -94px; top: 479px;"></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: 1954px; top: 479px;"></div></div></div></div><div style="position: absolute; left: 0px; top: 0px; z-index: 0;"><div style="position: absolute; left: 0px; top: 0px; z-index: 1;"><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 930px; top: -33px; opacity: 1; transition: opacity 200ms ease-out; -webkit-transition: opacity 200ms ease-out;"><img src="https://mts0.googleapis.com/vt?pb=!1m4!1m3!1i15!2i23396!3i13663!2m3!1e0!2sm!3i283471623!3m14!2sen-US!3sUS!5e18!12m1!1e47!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5zOi0xMDB8cC5nOjEuNHxwLmw6MjUscy50OjJ8cy5lOmx8cC52Om9mZg!4e0" draggable="false" style="width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; transform: translateZ(0px) translateZ(0px);"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 930px; top: 223px; opacity: 1; transition: opacity 200ms ease-out; -webkit-transition: opacity 200ms ease-out;"><img src="https://mts0.googleapis.com/vt?pb=!1m4!1m3!1i15!2i23396!3i13664!2m3!1e0!2sm!3i283471623!3m14!2sen-US!3sUS!5e18!12m1!1e47!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5zOi0xMDB8cC5nOjEuNHxwLmw6MjUscy50OjJ8cy5lOmx8cC52Om9mZg!4e0" draggable="false" style="width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; transform: translateZ(0px) translateZ(0px);"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 1186px; top: 223px; opacity: 1; transition: opacity 200ms ease-out; -webkit-transition: opacity 200ms ease-out;"><img src="https://mts1.googleapis.com/vt?pb=!1m4!1m3!1i15!2i23397!3i13664!2m3!1e0!2sm!3i283471623!3m14!2sen-US!3sUS!5e18!12m1!1e47!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5zOi0xMDB8cC5nOjEuNHxwLmw6MjUscy50OjJ8cy5lOmx8cC52Om9mZg!4e0" draggable="false" style="width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; transform: translateZ(0px) translateZ(0px);"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 1186px; top: -33px; opacity: 1; transition: opacity 200ms ease-out; -webkit-transition: opacity 200ms ease-out;"><img src="https://mts1.googleapis.com/vt?pb=!1m4!1m3!1i15!2i23397!3i13663!2m3!1e0!2sm!3i283471623!3m14!2sen-US!3sUS!5e18!12m1!1e47!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5zOi0xMDB8cC5nOjEuNHxwLmw6MjUscy50OjJ8cy5lOmx8cC52Om9mZg!4e0" draggable="false" style="width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; transform: translateZ(0px) translateZ(0px);"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 674px; top: 223px; opacity: 1; transition: opacity 200ms ease-out; -webkit-transition: opacity 200ms ease-out;"><img src="https://mts1.googleapis.com/vt?pb=!1m4!1m3!1i15!2i23395!3i13664!2m3!1e0!2sm!3i283472949!3m14!2sen-US!3sUS!5e18!12m1!1e47!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5zOi0xMDB8cC5nOjEuNHxwLmw6MjUscy50OjJ8cy5lOmx8cC52Om9mZg!4e0" draggable="false" style="width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; transform: translateZ(0px) translateZ(0px);"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 674px; top: -33px; opacity: 1; transition: opacity 200ms ease-out; -webkit-transition: opacity 200ms ease-out;"><img src="https://mts1.googleapis.com/vt?pb=!1m4!1m3!1i15!2i23395!3i13663!2m3!1e0!2sm!3i283472949!3m14!2sen-US!3sUS!5e18!12m1!1e47!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5zOi0xMDB8cC5nOjEuNHxwLmw6MjUscy50OjJ8cy5lOmx8cC52Om9mZg!4e0" draggable="false" style="width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; transform: translateZ(0px) translateZ(0px);"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 930px; top: -289px; opacity: 1; transition: opacity 200ms ease-out; -webkit-transition: opacity 200ms ease-out;"><img src="https://mts0.googleapis.com/vt?pb=!1m4!1m3!1i15!2i23396!3i13662!2m3!1e0!2sm!3i283471623!3m14!2sen-US!3sUS!5e18!12m1!1e47!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5zOi0xMDB8cC5nOjEuNHxwLmw6MjUscy50OjJ8cy5lOmx8cC52Om9mZg!4e0" draggable="false" style="width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; transform: translateZ(0px) translateZ(0px);"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 930px; top: 479px; opacity: 1; transition: opacity 200ms ease-out; -webkit-transition: opacity 200ms ease-out;"><img src="https://mts0.googleapis.com/vt?pb=!1m4!1m3!1i15!2i23396!3i13665!2m3!1e0!2sm!3i283472113!3m14!2sen-US!3sUS!5e18!12m1!1e47!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5zOi0xMDB8cC5nOjEuNHxwLmw6MjUscy50OjJ8cy5lOmx8cC52Om9mZg!4e0" draggable="false" style="width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; transform: translateZ(0px) translateZ(0px);"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 674px; top: -289px; opacity: 1; transition: opacity 200ms ease-out; -webkit-transition: opacity 200ms ease-out;"><img src="https://mts1.googleapis.com/vt?pb=!1m4!1m3!1i15!2i23395!3i13662!2m3!1e0!2sm!3i283472949!3m14!2sen-US!3sUS!5e18!12m1!1e47!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5zOi0xMDB8cC5nOjEuNHxwLmw6MjUscy50OjJ8cy5lOmx8cC52Om9mZg!4e0" draggable="false" style="width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; transform: translateZ(0px) translateZ(0px);"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 674px; top: 479px; opacity: 1; transition: opacity 200ms ease-out; -webkit-transition: opacity 200ms ease-out;"><img src="https://mts1.googleapis.com/vt?pb=!1m4!1m3!1i15!2i23395!3i13665!2m3!1e0!2sm!3i283472941!3m14!2sen-US!3sUS!5e18!12m1!1e47!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5zOi0xMDB8cC5nOjEuNHxwLmw6MjUscy50OjJ8cy5lOmx8cC52Om9mZg!4e0" draggable="false" style="width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; transform: translateZ(0px) translateZ(0px);"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 1186px; top: -289px; opacity: 1; transition: opacity 200ms ease-out; -webkit-transition: opacity 200ms ease-out;"><img src="https://mts1.googleapis.com/vt?pb=!1m4!1m3!1i15!2i23397!3i13662!2m3!1e0!2sm!3i283471623!3m14!2sen-US!3sUS!5e18!12m1!1e47!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5zOi0xMDB8cC5nOjEuNHxwLmw6MjUscy50OjJ8cy5lOmx8cC52Om9mZg!4e0" draggable="false" style="width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; transform: translateZ(0px) translateZ(0px);"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 1186px; top: 479px; opacity: 1; transition: opacity 200ms ease-out; -webkit-transition: opacity 200ms ease-out;"><img src="https://mts1.googleapis.com/vt?pb=!1m4!1m3!1i15!2i23397!3i13665!2m3!1e0!2sm!3i283472113!3m14!2sen-US!3sUS!5e18!12m1!1e47!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5zOi0xMDB8cC5nOjEuNHxwLmw6MjUscy50OjJ8cy5lOmx8cC52Om9mZg!4e0" draggable="false" style="width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; transform: translateZ(0px) translateZ(0px);"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 418px; top: -33px; opacity: 1; transition: opacity 200ms ease-out; -webkit-transition: opacity 200ms ease-out;"><img src="https://mts0.googleapis.com/vt?pb=!1m4!1m3!1i15!2i23394!3i13663!2m3!1e0!2sm!3i283472949!3m14!2sen-US!3sUS!5e18!12m1!1e47!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5zOi0xMDB8cC5nOjEuNHxwLmw6MjUscy50OjJ8cy5lOmx8cC52Om9mZg!4e0" draggable="false" style="width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; transform: translateZ(0px) translateZ(0px);"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 418px; top: 223px; opacity: 1; transition: opacity 200ms ease-out; -webkit-transition: opacity 200ms ease-out;"><img src="https://mts0.googleapis.com/vt?pb=!1m4!1m3!1i15!2i23394!3i13664!2m3!1e0!2sm!3i283472949!3m14!2sen-US!3sUS!5e18!12m1!1e47!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5zOi0xMDB8cC5nOjEuNHxwLmw6MjUscy50OjJ8cy5lOmx8cC52Om9mZg!4e0" draggable="false" style="width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; transform: translateZ(0px) translateZ(0px);"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 1442px; top: -33px; opacity: 1; transition: opacity 200ms ease-out; -webkit-transition: opacity 200ms ease-out;"><img src="https://mts0.googleapis.com/vt?pb=!1m4!1m3!1i15!2i23398!3i13663!2m3!1e0!2sm!3i283471623!3m14!2sen-US!3sUS!5e18!12m1!1e47!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5zOi0xMDB8cC5nOjEuNHxwLmw6MjUscy50OjJ8cy5lOmx8cC52Om9mZg!4e0" draggable="false" style="width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; transform: translateZ(0px) translateZ(0px);"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 1442px; top: 223px; opacity: 1; transition: opacity 200ms ease-out; -webkit-transition: opacity 200ms ease-out;"><img src="https://mts0.googleapis.com/vt?pb=!1m4!1m3!1i15!2i23398!3i13664!2m3!1e0!2sm!3i283471623!3m14!2sen-US!3sUS!5e18!12m1!1e47!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5zOi0xMDB8cC5nOjEuNHxwLmw6MjUscy50OjJ8cy5lOmx8cC52Om9mZg!4e0" draggable="false" style="width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; transform: translateZ(0px) translateZ(0px);"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 1442px; top: -289px; opacity: 1; transition: opacity 200ms ease-out; -webkit-transition: opacity 200ms ease-out;"><img src="https://mts0.googleapis.com/vt?pb=!1m4!1m3!1i15!2i23398!3i13662!2m3!1e0!2sm!3i283471623!3m14!2sen-US!3sUS!5e18!12m1!1e47!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5zOi0xMDB8cC5nOjEuNHxwLmw6MjUscy50OjJ8cy5lOmx8cC52Om9mZg!4e0" draggable="false" style="width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; transform: translateZ(0px) translateZ(0px);"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 418px; top: 479px; opacity: 1; transition: opacity 200ms ease-out; -webkit-transition: opacity 200ms ease-out;"><img src="https://mts0.googleapis.com/vt?pb=!1m4!1m3!1i15!2i23394!3i13665!2m3!1e0!2sm!3i283472941!3m14!2sen-US!3sUS!5e18!12m1!1e47!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5zOi0xMDB8cC5nOjEuNHxwLmw6MjUscy50OjJ8cy5lOmx8cC52Om9mZg!4e0" draggable="false" style="width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; transform: translateZ(0px) translateZ(0px);"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 418px; top: -289px; opacity: 1; transition: opacity 200ms ease-out; -webkit-transition: opacity 200ms ease-out;"><img src="https://mts0.googleapis.com/vt?pb=!1m4!1m3!1i15!2i23394!3i13662!2m3!1e0!2sm!3i283472949!3m14!2sen-US!3sUS!5e18!12m1!1e47!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5zOi0xMDB8cC5nOjEuNHxwLmw6MjUscy50OjJ8cy5lOmx8cC52Om9mZg!4e0" draggable="false" style="width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; transform: translateZ(0px) translateZ(0px);"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 1442px; top: 479px; opacity: 1; transition: opacity 200ms ease-out; -webkit-transition: opacity 200ms ease-out;"><img src="https://mts0.googleapis.com/vt?pb=!1m4!1m3!1i15!2i23398!3i13665!2m3!1e0!2sm!3i283446977!3m14!2sen-US!3sUS!5e18!12m1!1e47!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5zOi0xMDB8cC5nOjEuNHxwLmw6MjUscy50OjJ8cy5lOmx8cC52Om9mZg!4e0" draggable="false" style="width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; transform: translateZ(0px) translateZ(0px);"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 1698px; top: 223px; opacity: 1; transition: opacity 200ms ease-out; -webkit-transition: opacity 200ms ease-out;"><img src="https://mts1.googleapis.com/vt?pb=!1m4!1m3!1i15!2i23399!3i13664!2m3!1e0!2sm!3i283471500!3m14!2sen-US!3sUS!5e18!12m1!1e47!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5zOi0xMDB8cC5nOjEuNHxwLmw6MjUscy50OjJ8cy5lOmx8cC52Om9mZg!4e0" draggable="false" style="width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; transform: translateZ(0px) translateZ(0px);"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 162px; top: -33px; opacity: 1; transition: opacity 200ms ease-out; -webkit-transition: opacity 200ms ease-out;"><img src="https://mts1.googleapis.com/vt?pb=!1m4!1m3!1i15!2i23393!3i13663!2m3!1e0!2sm!3i283472949!3m14!2sen-US!3sUS!5e18!12m1!1e47!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5zOi0xMDB8cC5nOjEuNHxwLmw6MjUscy50OjJ8cy5lOmx8cC52Om9mZg!4e0" draggable="false" style="width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; transform: translateZ(0px) translateZ(0px);"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 1698px; top: -33px; opacity: 1; transition: opacity 200ms ease-out; -webkit-transition: opacity 200ms ease-out;"><img src="https://mts1.googleapis.com/vt?pb=!1m4!1m3!1i15!2i23399!3i13663!2m3!1e0!2sm!3i283471500!3m14!2sen-US!3sUS!5e18!12m1!1e47!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5zOi0xMDB8cC5nOjEuNHxwLmw6MjUscy50OjJ8cy5lOmx8cC52Om9mZg!4e0" draggable="false" style="width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; transform: translateZ(0px) translateZ(0px);"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 162px; top: 223px; opacity: 1; transition: opacity 200ms ease-out; -webkit-transition: opacity 200ms ease-out;"><img src="https://mts1.googleapis.com/vt?pb=!1m4!1m3!1i15!2i23393!3i13664!2m3!1e0!2sm!3i283472949!3m14!2sen-US!3sUS!5e18!12m1!1e47!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5zOi0xMDB8cC5nOjEuNHxwLmw6MjUscy50OjJ8cy5lOmx8cC52Om9mZg!4e0" draggable="false" style="width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; transform: translateZ(0px) translateZ(0px);"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 1698px; top: -289px; opacity: 1; transition: opacity 200ms ease-out; -webkit-transition: opacity 200ms ease-out;"><img src="https://mts1.googleapis.com/vt?pb=!1m4!1m3!1i15!2i23399!3i13662!2m3!1e0!2sm!3i283471500!3m14!2sen-US!3sUS!5e18!12m1!1e47!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5zOi0xMDB8cC5nOjEuNHxwLmw6MjUscy50OjJ8cy5lOmx8cC52Om9mZg!4e0" draggable="false" style="width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; transform: translateZ(0px) translateZ(0px);"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 162px; top: -289px; opacity: 1; transition: opacity 200ms ease-out; -webkit-transition: opacity 200ms ease-out;"><img src="https://mts1.googleapis.com/vt?pb=!1m4!1m3!1i15!2i23393!3i13662!2m3!1e0!2sm!3i283472949!3m14!2sen-US!3sUS!5e18!12m1!1e47!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5zOi0xMDB8cC5nOjEuNHxwLmw6MjUscy50OjJ8cy5lOmx8cC52Om9mZg!4e0" draggable="false" style="width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; transform: translateZ(0px) translateZ(0px);"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 162px; top: 479px; opacity: 1; transition: opacity 200ms ease-out; -webkit-transition: opacity 200ms ease-out;"><img src="https://mts1.googleapis.com/vt?pb=!1m4!1m3!1i15!2i23393!3i13665!2m3!1e0!2sm!3i283472941!3m14!2sen-US!3sUS!5e18!12m1!1e47!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5zOi0xMDB8cC5nOjEuNHxwLmw6MjUscy50OjJ8cy5lOmx8cC52Om9mZg!4e0" draggable="false" style="width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; transform: translateZ(0px) translateZ(0px);"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 1698px; top: 479px; opacity: 1; transition: opacity 200ms ease-out; -webkit-transition: opacity 200ms ease-out;"><img src="https://mts1.googleapis.com/vt?pb=!1m4!1m3!1i15!2i23399!3i13665!2m3!1e0!2sm!3i283471461!3m14!2sen-US!3sUS!5e18!12m1!1e47!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5zOi0xMDB8cC5nOjEuNHxwLmw6MjUscy50OjJ8cy5lOmx8cC52Om9mZg!4e0" draggable="false" style="width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; transform: translateZ(0px) translateZ(0px);"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: -94px; top: 223px; opacity: 1; transition: opacity 200ms ease-out; -webkit-transition: opacity 200ms ease-out;"><img src="https://mts0.googleapis.com/vt?pb=!1m4!1m3!1i15!2i23392!3i13664!2m3!1e0!2sm!3i283472949!3m14!2sen-US!3sUS!5e18!12m1!1e47!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5zOi0xMDB8cC5nOjEuNHxwLmw6MjUscy50OjJ8cy5lOmx8cC52Om9mZg!4e0" draggable="false" style="width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; transform: translateZ(0px) translateZ(0px);"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 1954px; top: 223px; opacity: 1; transition: opacity 200ms ease-out; -webkit-transition: opacity 200ms ease-out;"><img src="https://mts0.googleapis.com/vt?pb=!1m4!1m3!1i15!2i23400!3i13664!2m3!1e0!2sm!3i283471500!3m14!2sen-US!3sUS!5e18!12m1!1e47!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5zOi0xMDB8cC5nOjEuNHxwLmw6MjUscy50OjJ8cy5lOmx8cC52Om9mZg!4e0" draggable="false" style="width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; transform: translateZ(0px) translateZ(0px);"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 1954px; top: -33px; opacity: 1; transition: opacity 200ms ease-out; -webkit-transition: opacity 200ms ease-out;"><img src="https://mts0.googleapis.com/vt?pb=!1m4!1m3!1i15!2i23400!3i13663!2m3!1e0!2sm!3i283471500!3m14!2sen-US!3sUS!5e18!12m1!1e47!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5zOi0xMDB8cC5nOjEuNHxwLmw6MjUscy50OjJ8cy5lOmx8cC52Om9mZg!4e0" draggable="false" style="width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; transform: translateZ(0px) translateZ(0px);"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: -94px; top: -33px; opacity: 1; transition: opacity 200ms ease-out; -webkit-transition: opacity 200ms ease-out;"><img src="https://mts0.googleapis.com/vt?pb=!1m4!1m3!1i15!2i23392!3i13663!2m3!1e0!2sm!3i283472949!3m14!2sen-US!3sUS!5e18!12m1!1e47!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5zOi0xMDB8cC5nOjEuNHxwLmw6MjUscy50OjJ8cy5lOmx8cC52Om9mZg!4e0" draggable="false" style="width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; transform: translateZ(0px) translateZ(0px);"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 1954px; top: -289px; opacity: 1; transition: opacity 200ms ease-out; -webkit-transition: opacity 200ms ease-out;"><img src="https://mts0.googleapis.com/vt?pb=!1m4!1m3!1i15!2i23400!3i13662!2m3!1e0!2sm!3i283472347!3m14!2sen-US!3sUS!5e18!12m1!1e47!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5zOi0xMDB8cC5nOjEuNHxwLmw6MjUscy50OjJ8cy5lOmx8cC52Om9mZg!4e0" draggable="false" style="width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; transform: translateZ(0px) translateZ(0px);"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: -94px; top: -289px; opacity: 1; transition: opacity 200ms ease-out; -webkit-transition: opacity 200ms ease-out;"><img src="https://mts0.googleapis.com/vt?pb=!1m4!1m3!1i15!2i23392!3i13662!2m3!1e0!2sm!3i283472949!3m14!2sen-US!3sUS!5e18!12m1!1e47!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5zOi0xMDB8cC5nOjEuNHxwLmw6MjUscy50OjJ8cy5lOmx8cC52Om9mZg!4e0" draggable="false" style="width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; transform: translateZ(0px) translateZ(0px);"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: -94px; top: 479px; opacity: 1; transition: opacity 200ms ease-out; -webkit-transition: opacity 200ms ease-out;"><img src="https://mts0.googleapis.com/vt?pb=!1m4!1m3!1i15!2i23392!3i13665!2m3!1e0!2sm!3i283472927!3m14!2sen-US!3sUS!5e18!12m1!1e47!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5zOi0xMDB8cC5nOjEuNHxwLmw6MjUscy50OjJ8cy5lOmx8cC52Om9mZg!4e0" draggable="false" style="width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; transform: translateZ(0px) translateZ(0px);"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 1954px; top: 479px; opacity: 1; transition: opacity 200ms ease-out; -webkit-transition: opacity 200ms ease-out;"><img src="https://mts0.googleapis.com/vt?pb=!1m4!1m3!1i15!2i23400!3i13665!2m3!1e0!2sm!3i283471461!3m14!2sen-US!3sUS!5e18!12m1!1e47!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5zOi0xMDB8cC5nOjEuNHxwLmw6MjUscy50OjJ8cy5lOmx8cC52Om9mZg!4e0" draggable="false" style="width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; transform: translateZ(0px) translateZ(0px);"></div></div></div></div><div style="position: absolute; left: 0px; top: 0px; z-index: 2; width: 100%; height: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 3; width: 100%; transform-origin: 0px 0px 0px; transform: matrix(1, 0, 0, 1, 0, 0);"><div style="transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 104; width: 100%;"></div><div style="transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 105; width: 100%;"></div><div style="transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 106; width: 100%;"></div><div style="transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 107; width: 100%;"></div></div></div><div style="margin-left: 5px; margin-right: 5px; z-index: 1000000; position: absolute; left: 0px; bottom: 0px;"><a target="_blank" href="http://maps.google.com/maps?ll=28.609795,77.036978&amp;z=15&amp;t=m&amp;hl=en-US&amp;gl=US&amp;mapclient=apiv3" title="Click to see this area on Google Maps" style="position: static; overflow: visible; float: none; display: inline;"><div style="width: 62px; height: 26px; cursor: pointer;"><img src="https://maps.gstatic.com/mapfiles/api-3/images/google_white2.png" draggable="false" style="position: absolute; left: 0px; top: 0px; width: 62px; height: 26px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px;"></div></a></div><div class="gmnoprint" style="z-index: 1000001; position: absolute; right: 168px; bottom: 0px; width: 122px;"><div draggable="false" class="gm-style-cc" style="-webkit-user-select: none;"><div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;"><div style="width: 1px;"></div><div style="width: auto; height: 100%; margin-left: 1px; background-color: rgb(245, 245, 245);"></div></div><div style="position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right;"><a style="color: rgb(68, 68, 68); text-decoration: none; cursor: pointer; display: none;">Map Data</a><span style="">Map data ©2014 Google</span></div></div></div><div style="padding: 15px 21px; border: 1px solid rgb(171, 171, 171); font-family: Roboto, Arial, sans-serif; color: rgb(34, 34, 34); -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 16px; box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 16px; z-index: 10000002; display: none; width: 256px; height: 148px; position: absolute; left: 800px; top: 230px; background-color: white;"><div style="padding: 0px 0px 10px; font-size: 16px;">Map Data</div><div style="font-size: 13px;">Map data ©2014 Google</div><div style="width: 13px; height: 13px; overflow: hidden; position: absolute; opacity: 0.7; transform: translateZ(0px); right: 12px; top: 12px; z-index: 10000; cursor: pointer;"><img src="image/mapcnt3.png" draggable="false" style="position: absolute; left: -2px; top: -336px; width: 59px; height: 492px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px;"></div></div><div class="gmnoscreen" style="position: absolute; right: 0px; bottom: 0px;"><div style="font-family: Roboto, Arial, sans-serif; font-size: 11px; color: rgb(68, 68, 68); direction: ltr; text-align: right; background-color: rgb(245, 245, 245);">Map data ©2014 Google</div></div><div class="gmnoprint gm-style-cc" draggable="false" style="z-index: 1000001; position: absolute; -webkit-user-select: none; right: 96px; bottom: 0px;"><div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;"><div style="width: 1px;"></div><div style="width: auto; height: 100%; margin-left: 1px; background-color: rgb(245, 245, 245);"></div></div><div style="position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right;"><a href="http://www.google.com/intl/en-US_US/help/terms_maps.html" target="_blank" style="text-decoration: none; cursor: pointer; color: rgb(68, 68, 68);">Terms of Use</a></div></div><div draggable="false" class="gm-style-cc" style="-webkit-user-select: none; position: absolute; right: 0px; bottom: 0px;"><div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;"><div style="width: 1px;"></div><div style="width: auto; height: 100%; margin-left: 1px; background-color: rgb(245, 245, 245);"></div></div><div style="position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right;"><a target="_new" title="Report errors in the road map or imagery to Google" href="https://www.google.com/maps/@28.609795,77.036978,15z/data=!10m1!1e1!12b1?source=apiv3" style="font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); text-decoration: none; position: relative;">Report a map error</a></div></div></div></div>
+
+		<div class="text">
+			<h2 class="page-title">Where we are?<span class="border"></span></h2>
+			<p class="page-subtitle">Debating Society NSIT,Dwarka<br>+91 8860810815<br>colloquiumnsit@gmail.com<script type="text/javascript">
+				/* <![CDATA[ */
+				(function(){try{var s,a,i,j,r,c,l,b=document.getElementsByTagName("script");l=b[b.length-1].previousSibling;a=l.getAttribute('data-cfemail');if(a){s='';r=parseInt(a.substr(0,2),16);for(j=2;a.length-j;j+=2){c=parseInt(a.substr(j,2),16)^r;s+=String.fromCharCode(c);}s=document.createTextNode(s);l.parentNode.replaceChild(s,l);}}catch(e){}})();
+				/* ]]> */
+			</script><script type="text/javascript">
+				/* <![CDATA[ */
+				(function(){try{var s,a,i,j,r,c,l,b=document.getElementsByTagName("script");l=b[b.length-1].previousSibling;a=l.getAttribute('data-cfemail');if(a){s='';r=parseInt(a.substr(0,2),16);for(j=2;a.length-j;j+=2){c=parseInt(a.substr(j,2),16)^r;s+=String.fromCharCode(c);}s=document.createTextNode(s);l.parentNode.replaceChild(s,l);}}catch(e){}})();
+				/* ]]> */
+			</script></p>
+		</div>
+	</section>
+</div>
+
+
+<footer id="footer">
+	<div class="wrap">
+
+		<div>
+
+			<h1><strong><font color="White">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Connect &amp; Collaborate</font></strong></h1>
+			<div class="col">
+				<ul class="social">
+					<li><a href="https://www.facebook.com/ColloquiumNsit/?fref=ts">Facebook<i class="fa fa-facebook"></i></a></li>
+
+					<br>Expertly Ctrl C'd and V's by <a href="https://github.com/karanchahal">Karanbir Chahal</a><br>
+				</ul>
+			</div>
+
+		</div>
 	</div>
-    
+	<a href="#" id="go-top" class="bottom" style="opacity: 1;"></a>
+</footer>
+<div id="maker"><center>
+<br>Expertly Ctrl C'd and V's by <a href="https://github.com/karanchahal">Karanbir Chahal</a><br>
 </div>
 
-<!-- PART 6 - SOCIAL PART -->
-
-<div id="A6">
-
-<div id="wrapper-social" class="wow bounceInLeft" data-wow-offset="10">
-    
-    	<div id="main-behance">
-    		<div id="cadre-behance" class="object">
-        		<div id="behance" class="object">E</div>
-    		</div>
-        </div>
-        
-        <div id="main-dribbble">
-    		<div id="cadre-dribbble" class="object">
-      	  		<div id="dribbble" class="object">D</div>
-    		</div>
-        </div>
-
-		<div id="main-facebook">
-    		<div id="cadre-facebook" class="object">
-	        	<div id="facebook" class="object">F</div>
-        	</div>
-        </div>
- 
-		<div id="main-google">
-    		<div id="cadre-google" class="object">
-        		<div id="google" class="object">G</div>
-        	</div>
-        </div>
-        
-        <div id="main-linked">
-    		<div id="cadre-linked" class="object">
-        		<div id="linked" class="object">I</div>
-        	</div>
-        </div>
-        
-    </div>
-</div>
-
-<!-- PART 7 - COPYRIGHT -->
-
-<div id="A7">
-
-	<div id="wrapper-A7">
-    <div id="line-A7"></div>
-	<div id="copyright"><strong>© Copyright 2016. All rights reserved.&nbsp Designed by <a href="http://designscrazed.org/">Allie</a></strong></div>
-    </div>
-    
-</div>
 
 <!-- SCRIPT -->
 
@@ -1881,6 +1800,11 @@ $(document).on('touchend mouseout', '#wrapper-learnmore', function(event){
 });
 
 	</script>
+<script type="text/javascript" src="js/jquery-animate-numbers/jquery.animate-numbers.js"></script>
+<script type="text/javascript" src="js/smoothscroll/smoothscroll.js"></script>
+<script type="text/javascript" src="js/infobox/infobox.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript">App.start();</script>
 
 </body>
 </html>
